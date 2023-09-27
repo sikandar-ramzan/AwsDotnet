@@ -1,0 +1,24 @@
+﻿@model List<DynamoDbItem>
+
+<h1>Data from DynamoDB Table</h1>
+<hr />
+<br />
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Tech Stack</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Name</td>
+                <td>@item.TechStack</td>
+            </tr>
+        }
+    </tbody>
+</table>

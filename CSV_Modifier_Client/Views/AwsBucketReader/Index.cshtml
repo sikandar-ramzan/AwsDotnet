@@ -1,0 +1,30 @@
+﻿@model List<CsvDataModel>
+
+<h1>CSV Data from S3</h1>
+
+@if (Model != null)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Resource Name</th>
+                <th>Tech Stack</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Name</td>
+                    <td>@item.TechStack</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No data available.</p>
+}

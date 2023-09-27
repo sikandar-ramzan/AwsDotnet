@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelReaderAPI", "ExcelRead
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSV_Modifier_Lambda", "CSV_Modifier_Lambda\CSV_Modifier_Lambda.csproj", "{6500A714-3A48-4DB1-9C67-77EA4417C05D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSV_Modifier_Client", "CSV_Modifier_Client\CSV_Modifier_Client.csproj", "{8531F1C8-0722-4BB6-A778-6FFCF76FAE65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6500A714-3A48-4DB1-9C67-77EA4417C05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6500A714-3A48-4DB1-9C67-77EA4417C05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6500A714-3A48-4DB1-9C67-77EA4417C05D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8531F1C8-0722-4BB6-A778-6FFCF76FAE65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8531F1C8-0722-4BB6-A778-6FFCF76FAE65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8531F1C8-0722-4BB6-A778-6FFCF76FAE65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8531F1C8-0722-4BB6-A778-6FFCF76FAE65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
