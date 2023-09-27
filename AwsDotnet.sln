@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelReader", "ExcelReader\ExcelReader.csproj", "{A98ABEAF-469E-43D8-9287-E2AF7D4BAAA9}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelReaderAPI", "ExcelReaderAPI\ExcelReaderAPI.csproj", "{B719A156-40DF-445A-A182-F7F9A15CA95E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A98ABEAF-469E-43D8-9287-E2AF7D4BAAA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A98ABEAF-469E-43D8-9287-E2AF7D4BAAA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A98ABEAF-469E-43D8-9287-E2AF7D4BAAA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B719A156-40DF-445A-A182-F7F9A15CA95E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B719A156-40DF-445A-A182-F7F9A15CA95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B719A156-40DF-445A-A182-F7F9A15CA95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B719A156-40DF-445A-A182-F7F9A15CA95E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
