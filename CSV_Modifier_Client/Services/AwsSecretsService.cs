@@ -1,20 +1,27 @@
 ﻿using Amazon;
 using Amazon.SecretsManager;
 using Amazon.SecretsManager.Model;
+using Microsoft.Extensions.Configuration;
 
 namespace CSV_Modifier_Client.Services
 {
     public class AwsSecretsService
     {
+        private readonly IConfiguration _configuration;
+
+        public AwsSecretsService(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public async Task<string> GetAwsSecret (string secretName)
         {
-            const string region = "us-east-1";
-            var awsSecretsMngrClient = new AmazonSecretsManagerClient(RegionEndpoint.GetBySystemName(region));
+            
+            var awsSecretsMngrClient = new AmazonSecretsManagerClient(RegionEndpoint.GetBySystemName(_configuration["AWSConfig:Region"]));
 
             var request = new GetSecretValueRequest
             {
                 SecretId = secretName,
-                VersionStage = "AWSCURRENT",
+                VersionStage = _configuration["AWSConfig:VersionStage"]
             };
 
             GetSecretValueResponse response;

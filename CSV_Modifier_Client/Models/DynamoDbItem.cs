@@ -2,7 +2,7 @@
 {
     public class DynamoDbItem
     {
-        public string ID { get; set; } = string.Empty;
+        public string Id { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public string TechStack { get; set; } = string.Empty;
 

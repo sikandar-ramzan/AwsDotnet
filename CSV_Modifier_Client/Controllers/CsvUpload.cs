@@ -2,14 +2,14 @@
 using Amazon.S3;
 using CSV_Modifier_Client.Models;
 using Microsoft.AspNetCore.Mvc;
-using Amazon;
 using CSV_Modifier_Client.Services;
+using CSV_Modifier_Client.Core;
 
 namespace CSV_Modifier_Client.Controllers
 {
     public class CsvUpload : Controller
     {
-        private readonly string bucketName = "csv-files-s3-bucket";
+        private readonly string bucketName = Constants.BucketName;
         private readonly AwsSecretsService _awsSecretsService;
         public CsvUpload(AwsSecretsService awsSecretsService)
         {

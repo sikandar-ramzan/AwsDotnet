@@ -1,23 +1,18 @@
-﻿using Amazon;
-using Amazon.S3;
+﻿using Amazon.S3;
 using Amazon.S3.Model;
+using CSV_Modifier_Client.Core;
 using CSV_Modifier_Client.Models;
 using CSV_Modifier_Client.Services;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSV_Modifier_Client.Controllers
 {
     public class AwsBucketReader : Controller
     {
-        private readonly string bucketName = "csv-files-s3-bucket";
+        private const string BucketName = Constants.BucketName;
 
         //fetching this file (object) from s3 bucket
-        private readonly string objectKey = "CommaSeparatedFile.csv";
+        private readonly string ObjectKey = Constants.ObjectKey;
         private readonly AwsSecretsService _awsSecretsService;
 
         public AwsBucketReader(AwsSecretsService awsSecretsService)
@@ -27,16 +22,16 @@ namespace CSV_Modifier_Client.Controllers
         public async Task<IActionResult> Index()
         {
             //super user manager => superman
-            string superman_access_key = await _awsSecretsService.GetAwsSecret("superman_access_key");
-            string superman_secret_superman_access_key = await _awsSecretsService.GetAwsSecret("superman_secret_access_key");
+            var supermanAccessKey = await _awsSecretsService.GetAwsSecret(Constants.SuperUserAccessKey);
+            var supermanSecretAccessKey = await _awsSecretsService.GetAwsSecret(Constants.SuperUserSectretKey);
             try
             {
-                using var s3Client = new AmazonS3Client(superman_access_key, superman_secret_superman_access_key);
+                using var s3Client = new AmazonS3Client(supermanAccessKey, supermanSecretAccessKey);
 
                 var getObjectRequest = new GetObjectRequest
                 {
-                    BucketName = bucketName,
-                    Key = objectKey
+                    BucketName = BucketName,
+                    Key = ObjectKey
                 };
 
                 using var response = await s3Client.GetObjectAsync(getObjectRequest);
@@ -54,7 +49,7 @@ namespace CSV_Modifier_Client.Controllers
                         {
                             var model = new CsvDataModel
                             {
-                                ID = Convert.ToInt32(rowData[0]),
+                                Id = Convert.ToInt32(rowData[0]),
                                 Name = rowData[1],
                                 TechStack = rowData[2]
                             };

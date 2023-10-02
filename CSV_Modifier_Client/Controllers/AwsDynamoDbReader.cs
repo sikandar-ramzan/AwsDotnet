@@ -3,19 +3,20 @@ using Amazon.DynamoDBv2.Model;
 using CSV_Modifier_Client.Services;
 using CSV_Modifier_Client.Models;
 using Microsoft.AspNetCore.Mvc;
+using CSV_Modifier_Client.Core;
 
 namespace CSV_Modifier_Client.Controllers
 {
     public class AwsDynamoDbReader : Controller
     {
         private readonly IAmazonDynamoDB _dynamoDBClient;
-        public AwsDynamoDbReader(AwsSecretsService awsSecretsService, IAmazonDynamoDB dynamoDBClient)
+        public AwsDynamoDbReader(IAmazonDynamoDB dynamoDBClient)
         {
             _dynamoDBClient = dynamoDBClient;
         }
         public IActionResult Index()
         {
-            string tableName = "csv_files_table";
+            string tableName = Constants.TableName;
 
             var scanRequest = new ScanRequest
             {
@@ -29,7 +30,7 @@ namespace CSV_Modifier_Client.Controllers
             var items = scanResponse.Items.Select(item =>
                  new DynamoDbItem
                  {
-                     ID = item["ID"].S,
+                     Id = item["ID"].S,
                      Name = item["Name"].S,
                      TechStack = item["Tech_Stack"].S
                  }).ToList();

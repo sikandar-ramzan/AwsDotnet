@@ -9,9 +9,19 @@ namespace CSV_Modifier_Client
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // Configuration setup
+            IConfiguration configuration = new ConfigurationBuilder()
+                .SetBasePath(builder.Environment.ContentRootPath)
+                .AddJsonFile("appsettings.json")
+                .Build();
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<AwsSecretsService>();
+
+            // Inject the IConfiguration instance into the AwsSecretsService
+            builder.Services.AddSingleton(configuration);
+
 
             //add the aws and dynamo db services
             builder.Services.AddAWSService<IAmazonDynamoDB>();
