@@ -9,6 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelReaderAPI", "ExcelRead
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSV_Modifier_Lambda", "CSV_Modifier_Lambda\CSV_Modifier_Lambda.csproj", "{6500A714-3A48-4DB1-9C67-77EA4417C05D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSV_Modifier_Client", "CSV_Modifier_Client\CSV_Modifier_Client.csproj", "{8531F1C8-0722-4BB6-A778-6FFCF76FAE65}"
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwsNotifierApp", "AwsNotifierApp\AwsNotifierApp.csproj", "{D07A14E7-42A6-4FB4-BD51-E645D934CC8A}"
 EndProject
 Global
@@ -29,6 +30,10 @@ Global
 		{6500A714-3A48-4DB1-9C67-77EA4417C05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6500A714-3A48-4DB1-9C67-77EA4417C05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6500A714-3A48-4DB1-9C67-77EA4417C05D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8531F1C8-0722-4BB6-A778-6FFCF76FAE65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8531F1C8-0722-4BB6-A778-6FFCF76FAE65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8531F1C8-0722-4BB6-A778-6FFCF76FAE65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8531F1C8-0722-4BB6-A778-6FFCF76FAE65}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D07A14E7-42A6-4FB4-BD51-E645D934CC8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D07A14E7-42A6-4FB4-BD51-E645D934CC8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D07A14E7-42A6-4FB4-BD51-E645D934CC8A}.Release|Any CPU.ActiveCfg = Release|Any CPU

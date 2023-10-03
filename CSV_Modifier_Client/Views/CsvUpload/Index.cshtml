@@ -1,0 +1,17 @@
+﻿
+@model CSV_Modifier_Client.Models.UploadViewModel
+
+<h1>Upload CSV File to S3 Bucket</h1>
+
+<form method="post" enctype="multipart/form-data" asp-controller="CsvUpload" asp-action="Upload">
+    <div class="form-group">
+        <label for="csvFile">Select CSV File:</label>
+        <input type="file" id="csvFile" name="csvFile" accept=".csv" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <div class="alert alert-info mt-3">@Model.Message</div>
+}
