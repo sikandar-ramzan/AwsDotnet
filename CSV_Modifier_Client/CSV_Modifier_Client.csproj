@@ -11,6 +11,7 @@
     <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.7" />
     <PackageReference Include="AWSSDK.S3" Version="3.7.104.2" />
     <PackageReference Include="AWSSDK.SecretsManager" Version="3.7.201.28" />
+    <PackageReference Include="AWSSDK.SimpleNotificationService" Version="3.7.200.49" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
