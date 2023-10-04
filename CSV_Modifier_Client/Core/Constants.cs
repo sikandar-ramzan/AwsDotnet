@@ -8,5 +8,6 @@
         public const string SuperUserAccessKey = "superman_access_key";
         public const string SuperUserSectretKey = "superman_secret_access_key";
         public const string SuperUserNameSecret = "UserName";
+        public const string CsvModifierTopicArn = "arn:aws:sns:us-east-1:605372049647:MyTopic";
     }
 }
